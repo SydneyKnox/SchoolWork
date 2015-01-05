@@ -1,0 +1,59 @@
+public class account {
+
+	private double balance;//variable to hold account balance
+	
+	//constructor with initial amount
+	public account(double initialBalance)
+	{
+		if(initialBalance>=0)
+		{
+			balance = initialBalance;
+		}
+		
+		else
+		{
+			System.out.println("Account balance cannot be less than 0. Initial balance set to $0.00");
+			balance = 0;
+		}
+	}
+	
+	//default constructor
+	public account()
+	{
+		balance = 0;
+	}
+	
+	//deposit method
+	public void deposit(double depositAmount)
+	{
+		if(depositAmount>0)
+		{
+			balance = balance + depositAmount;
+			System.out.printf("Deposit successful. New balance: $%.2f", checkBalance());
+		}
+		else
+		{
+			System.out.println("Deposit amount must be positive.");
+		}
+	}
+	
+	//withdraw method
+	public void withdraw(double withdrawalAmount)
+	{
+		if(withdrawalAmount > checkBalance())
+		{
+			System.out.printf("Error: withdrawal Amount must be less than account balance. Your current account balance is %.2f", checkBalance());
+		}
+		else
+		{
+			balance = balance - withdrawalAmount;
+			System.out.printf("Withdrawal successful. New balance: $%.2f", checkBalance());
+		}
+	}
+	
+	//returns variable balance
+	public double checkBalance()
+	{
+		return balance;
+	}
+}
