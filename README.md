@@ -1,4 +1,4 @@
-Repository: Examples
+<h1 style="background-color:#ffccoo;width:20px;height:20px;">Repository: Examples</h1>
 ========
 
 <h3>Example programs</h3>
