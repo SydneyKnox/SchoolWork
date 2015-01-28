@@ -22,7 +22,7 @@ int readMaze(const char *fileName, Maze *m, RobotModel *robot)
 {
     int r, c;           /* current row and column indices */
     FILE *inputFile;    /* file pointer to input file */
-    int success = 0;    /* whether we succeeded */
+    int success =0;    /* whether we succeeded */
 
     /* open input file */
     inputFile = fopen(fileName, "r");
